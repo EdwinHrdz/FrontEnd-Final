@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de imágenes</title>
+    <style>
+        body {
+            background-color: #333; /* Fondo oscuro */
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 5px solid transparent; /* Agregamos un borde transparente inicialmente */
+            transition: border-color 0.3s ease; /* Transición suave del cambio de color del borde */
+        }
+        .gallery img:hover {
+            border-color: #fff; /* Cambiamos el color del borde al pasar el cursor sobre la imagen */
+            transform: scale(1.05); /* Hacemos que la imagen aumente ligeramente de tamaño al pasar el cursor */
+        }
+        /* Cambia el número de columnas para dispositivos de pantalla pequeña */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr); /* Una columna en dispositivos pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="img/Skipper-1.jpg" alt="Imagen 1">
+        <img src="img/Skipper-2.jpg" alt="Imagen 2">
+        <img src="img/Skipper-3.jpg" alt="Imagen 3">
+        <img src="img/Skipper-4.jpg" alt="Imagen 4">
+        <img src="img/Skipper-5.jpg" alt="Imagen 5">
+        <img src="img/Skipper-6.jpg" alt="Imagen 6">
+        <img src="img/Skipper-7.jpg" alt="Imagen 7">
+        <img src="img/Skipper-8.jpg" alt="Imagen 8">
+        
+    </div>
+</body>
+</html>
